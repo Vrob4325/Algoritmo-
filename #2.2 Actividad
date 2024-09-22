@@ -1,0 +1,13 @@
+
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hola mundo" << std::endl;
+    std::cout << "\nHola mundo" << std::endl;
+    std::cout << "\nX\nY" << std::endl;
+    std::cout << "\n\nHola mundo\a" << std::endl;
+    std::cout << "\n\n\n\\ Hola mundo" << std::endl;
+
+    return 0;
+}
