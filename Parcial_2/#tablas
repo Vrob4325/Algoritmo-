@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int num;
+
+    cout << "Dame un número: ";
+    cin >> num;
+
+    for (int num2 = 1; num2 <= 10; num2 ++)
+ {
+        cout << num << " * " << num2 << " = " << num;
+ }
+ return 0;
+
+}

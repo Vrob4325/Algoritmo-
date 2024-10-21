@@ -1,0 +1,21 @@
+#include <iostream>
+
+int main() {
+    std::string username, password;
+
+    std::cout << "Introduce tu nombre de usuario: ";
+    std::cin >> username;
+
+    do {
+        std::cout << "Introduce la contraseña: ";
+        std::cin >> password;
+
+        if (password != "12345") {
+            std::cout << "Contraseña incorrecta. Inténtalo de nuevo.\n";
+        }
+    } while (password != "12345");  // Contraseña correcta
+
+    std::cout << "¡Bienvenido, " << username << "!\n";
+
+    return 0;
+}

@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main() {
+    float promedio1, promedio2, promedio3, promedio_final;
+
+    // Solicitar los tres promedios al usuario
+    printf("Ingresa el primer promedio: ");
+    scanf("%f", &promedio1);
+
+    printf("Ingresa el segundo promedio: ");
+    scanf("%f", &promedio2);
+
+    printf("Ingresa el tercer promedio: ");
+    scanf("%f", &promedio3);
+
+    // Calcular el promedio final
+    promedio_final = (promedio1 + promedio2 + promedio3) / 3;
+
+    // Evaluar si el promedio final es aprobatorio o reprobatorio
+    if (promedio_final >= 6.0) {
+        printf("Aprobado con un promedio de %.2f\n", promedio_final);
+    } else {
+        printf("Reprobado con un promedio de %.2f\n", promedio_final);
+    }
+
+    getch(); // Espera a que se presione una tecla antes de cerrar el programa
+    return 0;
+}

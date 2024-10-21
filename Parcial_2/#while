@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    double num, sum, pro;
+    sum = 0;
+    pro = 1;  // Inicializamos 'pro' en 1 para la multiplicación
+    num = 1;
+
+    printf("\nEscribe un número diferente de 0 (0 para detenerse): ");
+    scanf("%lf", &num);  // El formato correcto para double es %lf
+
+    while (num != 0) {  // La condición de bucle es 'num != 0'
+        sum = sum + num;
+        pro = pro * num;
+
+        printf("\nNúmero = %lf  Suma = %lf  Producto = %lf", num, sum, pro);  // Usamos %lf para double
+
+        printf("\nIntroduce otro número (0 para acabar): ");
+        scanf("%lf", &num);  // De nuevo, usamos %lf para double
+    }
+
+    printf("\n\nSuma Total = %lf", sum);
+    printf("\nProducto Total = %lf", pro);
+
+    return 0;
+}
