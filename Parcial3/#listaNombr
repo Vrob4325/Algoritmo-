@@ -1,0 +1,58 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int num_elementos;
+
+    
+    cout << "¿Cuántas personas quieres registrar? ";
+    cin >> num_elementos;
+    cin.ignore();
+
+    
+    vector<string> nombres;
+    vector<int> edades;
+
+    
+    for (int i = 0; i < num_elementos; i++) {
+        string nombre;
+        int edad;
+
+        cout << "Ingrese el nombre de la persona " << i + 1 << ": ";
+        getline(cin, nombre); 
+        cout << "Ingrese la edad de " << nombre << ": ";
+        cin >> edad;
+        cin.ignore(); 
+
+        
+        nombres.push_back(nombre);
+        edades.push_back(edad);
+    }
+
+    while (true) {
+        cout << "\nPersonas registradas:\n";
+        for (int i = 0; i < nombres.size(); i++) {
+            cout << i + 1 << ". " << nombres[i] << "\n";
+        }
+
+        cout << "\nSelecciona el número de la persona que quieres imprimir (o 0 para salir): ";
+        int opcion;
+        cin >> opcion;
+
+        if (opcion == 0) {
+            cout << "Saliendo del programa..." << endl;
+            break;
+        } else if (opcion > 0 && opcion <= nombres.size()) {
+            cout << "\nInformación de la persona seleccionada:\n";
+            cout << "Nombre: " << nombres[opcion - 1] << "\n";
+            cout << "Edad: " << edades[opcion - 1] << "\n";
+        } else {
+            cout << "Opción no válida. Intenta nuevamente.\n";
+        }
+    }
+
+    return 0;
+}

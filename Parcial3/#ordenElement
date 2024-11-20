@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    
+    vector<char> arr1 = {'A', 'B', 'C'};
+    vector<char> arr2 = {'D', 'E', 'F', 'G'};
+
+    
+    vector<char> combinedArr;
+
+    
+    combinedArr.insert(combinedArr.end(), arr1.begin(), arr1.end());
+
+    
+    combinedArr.insert(combinedArr.end(), arr2.begin(), arr2.end());
+
+  
+    cout << "Contenido del arreglo combinado: ";
+    for (char c : combinedArr) {
+        cout << c << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
